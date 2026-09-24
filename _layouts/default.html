@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} — VexVPN Connect</title>
+<meta name="description" content="{{ page.description | default: 'VexVPN Connect — клиент для VPN-серверов на базе Xray для iPhone.' }}">
+<style>
+:root { --bg:#070b12; --surface:#101827; --raised:#172338; --border:#293b53; --text:#edf3ff; --muted:#93a3bb; --accent:#12a8f5; }
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+header { border-bottom:1px solid var(--border); background:rgba(16,24,39,.85); position:sticky; top:0; backdrop-filter:blur(12px); z-index:1; }
+header .wrap { display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px; padding-top:14px; padding-bottom:14px; }
+.brand { font-weight:700; font-size:18px; color:var(--text); text-decoration:none; letter-spacing:-.3px; margin-right:auto; }
+nav a { color:var(--muted); text-decoration:none; font-size:15px; margin-left:14px; }
+nav a:first-child { margin-left:0; }
+nav a.active, nav a:hover { color:var(--accent); }
+main { padding:28px 0 48px; }
+h1 { font-size:30px; line-height:1.2; letter-spacing:-.6px; margin:8px 0 18px; }
+h2 { font-size:21px; margin:34px 0 10px; letter-spacing:-.3px; }
+h3 { font-size:17px; margin:24px 0 8px; }
+p, li { color:var(--text); }
+a { color:var(--accent); }
+strong { color:#fff; }
+code { font:14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; background:var(--raised); border-radius:6px; padding:1px 5px; word-break:break-word; }
+pre { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px 16px; overflow-x:auto; }
+pre code { background:none; padding:0; word-break:normal; }
+table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; display:block; overflow-x:auto; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:var(--surface); }
+hr { border:0; border-top:1px solid var(--border); margin:32px 0; }
+blockquote { margin:0; padding:2px 16px; border-left:3px solid var(--accent); color:var(--muted); }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:14px; padding:20px 0 32px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="{{ '/' | relative_url }}">VexVPN Connect</a>
+  <nav>
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Поддержка</a>
+    <a href="{{ '/privacy/' | relative_url }}"{% if page.url == '/privacy/' %} class="active"{% endif %}>Конфиденциальность</a>
+    <a href="{{ '/terms/' | relative_url }}"{% if page.url == '/terms/' %} class="active"{% endif %}>Соглашение</a>
+    <a href="{{ '/providers/' | relative_url }}"{% if page.url == '/providers/' %} class="active"{% endif %}>Провайдерам</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+{{ content }}
+</div></main>
+<footer><div class="wrap">© 2026 CEREBRA TECH S.R.L. · VexVPN Connect для iPhone</div></footer>
+</body>
+</html>
