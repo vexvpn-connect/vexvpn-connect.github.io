@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) for VexVPN Connect: support, privacy, terms, provider guide.
+title: VexVPN Connect
+lang: ru
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude: [README.md]
